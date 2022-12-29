@@ -1,57 +1,40 @@
-<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <title>Tribute Page</title>
-    <style>
-      #main {
-        width: 80%;
-        margin: 0 auto;
-        text-align: center;
-      }
-
-      #title {
-        font-size: 2em;
-        font-weight: bold;
-        margin-bottom: 1em;
-      }
-
-      #img-div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: 1em;
-      }
-
-      #image {
-        max-width: 50%;
-        height: auto;
-      }
-
-      #img-caption {
-        font-style: italic;
-        margin-left: 1em;
-      }
-
-      #tribute-info {
-        margin-bottom: 1em;
-      }
-
-      #tribute-link {
-        color: blue;
-        text-decoration: underline;
-      }
-    </style>
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <main id="main">
-      <h1 id="title">Dr. Norman Borlaug</h1>
-      <div id="img-div">
-        <img id="image" src="borlaug.jpg" alt="Picture of Dr. Norman Borlaug" />
-        <p id="img-caption">Dr. Norman Borlaug, recipient of the Nobel Peace Prize for his work in agriculture and world hunger.</p>
-      </div>
-      <p id="tribute-info">Dr. Norman Borlaug was an American agronomist and humanitarian who is considered to be the "father of the Green Revolution". He was awarded the Nobel Peace Prize in 1970 for his contributions to world peace through increasing food production. Borlaug's work is credited with saving over a billion lives through his development of high-yield, disease-resistant wheat and other crops.</p>
-      <a id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Learn more about Dr. Norman Borlaug</a>
-    </main>
+    <h1 id="title">Survey Form</h1>
+    <p id="description">Please fill out the following survey form to provide your feedback and help improve our services:</p>
+    <form id="survey-form">
+      <label for="name" id="name-label">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name">
+      <br>
+      <label for="email" id="email-label">Email:</label>
+      <input type="email" id="email" placeholder="Enter your email">
+      <br>
+      <label for="number" id="number-label">Phone number:</label>
+      <input type="number" id="number" placeholder="Enter your phone number" min="0" max="9999999999">
+      <br>
+      <label for="dropdown" id="dropdown-label">How did you hear about us?</label>
+      <select id="dropdown">
+        <option value="friends">From friends</option>
+        <option value="internet">From the internet</option>
+      </select>
+      <br>
+      <label for="radio1" id="radio1-label">Would you recommend our service to a friend?</label>
+      <input type="radio" id="radio1" name="recommendation" value="yes">Yes
+      <input type="radio" id="radio2" name="recommendation" value="no">No
+      <br>
+      <label for="checkbox1" id="checkbox1-label">What services are you interested in?</label>
+      <input type="checkbox" id="checkbox1" value="consulting">Consulting
+      <input type="checkbox" id="checkbox2" value="training">Training
+      <input type="checkbox" id="checkbox3" value="support">Support
+      <br>
+      <label for="comments" id="comments-label">Additional comments:</label>
+      <textarea id="comments"></textarea>
+      <br>
+      <button type="submit" id="submit">Submit</button>
+    </form>
   </body>
 </html>
